@@ -1,0 +1,81 @@
+@import "../../app.scss";
+.feedback-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 2.5rem; // px-10 py-12
+  
+  border-radius: 20px; // rounded-[20px]
+  max-width: 900px; // max-w-[370px]
+  margin: 0 auto; // mx-auto my-0
+
+  img.double-quotes {
+    width: 42.6px; // w-[42.6px]
+    height: 27.6px; // h-[27.6px]
+    object-fit: contain; // object-contain
+    @include mobile {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  p.feedback-content {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal; // font-normal
+    font-size: 25px; // text-[18px]
+    line-height: 32.4px; // leading-[32.4px]
+    color: #ffffff; // text-white
+    margin: 2.5rem 0; // my-10
+    @include mobile {
+      font-size: 15px;
+    }
+  }
+
+  .feedback-person {
+    display: flex;
+    flex-direction: row;
+  
+
+    img.profile-picture {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%; // rounded-full
+      @include mobile {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .person-details {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem; // ml-4
+
+      h4.person-name {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600; // font-semibold
+        font-size: 25px; // text-[20px]
+        line-height: 32px; // leading-[32px]
+        color: #ffffff; // text-white
+        @include mobile {
+          font-size: 15px;
+          line-height: 17px;
+          margin-bottom: 8px;
+        }
+      }
+
+      p.person-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: normal; // font-normal
+        font-size: 20px; // text-[16px]
+        line-height: 50px; // leading-[24px]
+        color: #aaaaaa; // text-dimWhite
+        @include mobile {
+          font-size: 10px;
+          line-height: 17px
+        }
+      }
+    }
+  }
+}

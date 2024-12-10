@@ -1,0 +1,109 @@
+@import "../../app.scss";
+#clients {
+  padding: 1.5rem 0; // py-6
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  // max-width: 100%;
+  width: 100vw;
+
+  @media (min-width: 640px) {
+    // sm: breakpoint
+    padding-top: 4rem; // sm:py-16
+    padding-bottom: 4rem;
+  }
+
+  .background-circle {
+    position: absolute;
+    z-index: 0;
+    width: 60%;
+    height: 60%;
+    right: -50%;
+    border-radius: 100%;
+    background: linear-gradient(90deg, rgba(164, 164, 255, 1) 0%, rgba(101, 101, 255, 1) 100%); // Example gradient
+    bottom: 2.5rem;
+  }
+
+  .testimonial-header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    
+
+    h2 {
+      
+      color: #ffffff;
+      line-height: 4.175rem;
+      width: 100%;
+      font-size: 50px; // text-[40px]
+      margin-left: 150px;
+      @include mobile {
+        font-size: 20px;
+        text-align:start;
+        margin-left: 8px;
+        color: orange;
+      
+      }
+
+      @media (min-width: 640px) {
+        // xs: breakpoint
+        font-size: 3rem; // xs:text-[48px]
+        line-height: 4.8rem; // xs:leading-[76.8px]
+      }
+    }
+
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: normal;
+      color: #aaa; // text-dimWhite
+      font-size: 1.125rem; // text-[18px]
+      line-height: 1.925rem; // leading-[30.8px]
+      text-align: left;
+      max-width: 450px;
+      margin-top: 1.5rem;
+      margin-right: 50px;
+      @include mobile {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        // md: breakpoint
+        margin-top: 0;
+        display: none;
+      }
+    }
+
+
+
+    @media (min-width: 768px) {
+      // md: breakpoint
+      flex-direction: row;
+      margin-bottom: 4rem;
+    }
+
+
+
+    
+  }
+
+  .card-content {
+    max-width: 1000px;
+    height: max-content;
+    @include mobile {
+      max-width: 250px;
+      overflow-x: hidden;
+
+    }
+    
+  }
+
+
+}

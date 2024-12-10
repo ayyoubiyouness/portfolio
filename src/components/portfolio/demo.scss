@@ -1,0 +1,179 @@
+@import "../../app.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap');
+
+.button-demo {
+
+    margin-left: 90px;
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+
+    // @include mobile {
+    //     width: 40px;
+    //     height: 40px;
+
+    // }
+
+}
+
+.button-demo:hover {
+    background-color: #a7dcaa;
+    /* Darker shade of green */
+
+}
+
+
+.demo-title {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    text-align: center;
+    color: rgb(207, 150, 44);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+
+    margin-bottom: 30px;
+
+    @include mobile {
+        font-size: 30px;
+        padding: 25px;
+    }
+
+}
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    margin: 100px;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video {
+        @include mobile {
+            width: 50%;
+            margin-top: 30px;
+        }
+
+
+
+
+
+        .video-section {
+            flex: 1;
+            margin: 100px;
+            height: 500px;
+
+            @include mobile {
+                align-items: center;
+                padding: 10px;
+                width: 800px;
+                height: 600px;
+            }
+
+
+
+        }
+    }
+
+    .technology-section {
+        flex: 1;
+        margin-left: 200px;
+
+        @include mobile {
+            margin-left: 50px;
+        }
+
+
+        .git-button {
+
+            display: flex;
+            
+            
+
+            .git-button1 {
+                background-color: orange;
+                border-radius: 20px;
+                border: none;
+                padding: 15px 32px;
+                text-align: center;
+                font-size: 30px;
+                cursor: pointer;
+                margin-top: 20px;
+                flex: 1;
+                max-width: 200px;
+                margin-left: 25px;
+                margin-right: 20px;
+                @include mobile {
+                    font-weight: bold;
+                }
+
+                
+
+            }
+
+            .git-button2 {
+                background-color: orange;
+                border-radius: 20px;
+                border: none;
+                padding: 15px 32px;
+                text-align: center;
+                font-size: 30px;
+                cursor: pointer;
+                margin-top: 20px;
+                flex: 1;
+                max-width: 200px;
+                margin-right: 370px;
+
+                @include mobile {
+                    font-weight: bold;
+                }
+            }
+
+            .git-button1:hover {
+                background-color: rgb(238, 204, 141);
+
+            }
+
+            .git-button2:hover {
+                background-color: rgb(238, 204, 141);
+
+            }
+
+        }
+
+
+
+        p {
+            font-family: 'Kanit', sans-serif;
+            font-size: 40px;
+            margin-bottom: 30px;
+
+            // @include mobile {
+            //     font-size: 30px;
+            // }
+        }
+
+        ul {
+            margin-left: 70px;
+            font-size: 30px;
+            margin-bottom: 20px;
+            line-height: 2;
+
+            // @include mobile {
+            //     font-size: 25px;
+            // }
+        }
+    }
+
+}

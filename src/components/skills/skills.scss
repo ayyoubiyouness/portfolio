@@ -1,0 +1,176 @@
+@import "../../app.scss";
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 50px;
+  text-align: center;
+  color: orange;
+  font-size: 100px;
+  font-weight: bold;
+
+  @include mobile {
+    font-size: 40px;
+    padding: 20px;
+  }
+
+}
+
+.skills-experiences {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 20px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+
+
+
+
+  // Style for the skills section
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    grid-row-gap: 25px;
+
+    @include mobile {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+
+    }
+
+    .skill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+      // Use a background for the skill circles
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Simple shadow for depth
+
+      img {
+        width: 80px; // Adjust icon size as necessary
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+
+        @include mobile {
+          width: 38px;
+          height: 38px
+        }
+      }
+
+      span {
+        font-size: 20px; // Adjust font size as necessary
+        color: rgb(227, 202, 202); // Adjust text color as necessary
+        font-weight: bold;
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  // Style for the experiences section
+  .experiences {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include mobile {
+      padding-left: 20px;
+    }
+
+
+    .experience {
+
+      display: flex;
+      // align-items: center;
+      flex-direction: column;
+      margin-bottom: 50px;
+      cursor: pointer;
+      position: static;
+      overflow: hidden;
+
+
+      @include mobile {
+        margin-bottom: 5px;
+        border-left: 4px solid orange;
+        gap: 3px;
+
+      }
+
+      // Container for year and title to keep them on the same line
+      .year-title {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 5px; // Space between the year-title and the company
+        margin-bottom: 15px;
+        font-size: 27px;
+
+        @include mobile {
+          margin-bottom: 8px;
+          align-items: center;
+          font-size: 15px;
+          margin-left: 10px;
+        }
+
+        .year {
+          font-weight: bold;
+          // Adjusted for visibility
+          color: #ede4e4; // Darker color for better readability
+          margin-right: 15px; // Space between year and title
+          font-weight: bold;
+        }
+
+        .title {
+          color: #e7dfdf; // Darker color for better readability
+          font-weight: bold;
+        }
+      }
+
+      .company {
+        font-size: 16px; // Adjusted for visibility
+        color: #efe8e8; // Slightly lighter color for distinction
+        font-style: italic;
+        margin-left: 50px;
+        font-weight: bold;
+        margin-bottom: 10px;
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+
+      .description {
+        position: relative;
+        max-width: 600px;
+        line-height: 2ch;
+        font-size: 16px;
+        @include mobile {
+          display: none;
+        }
+
+      }
+
+
+
+
+
+
+    }
+
+  }
+
+}
